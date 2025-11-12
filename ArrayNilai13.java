@@ -13,7 +13,11 @@ public class ArrayNilai13 {
         }
 
         for (int i = 0; i < 10; i++) {
-            System.out.println("Nilai akhir ke-" + i + " adalah " + na[i]);
+            if (na[i] > 70) {
+                System.out.println("Mahasiswa ke-"+i+" dinyatakan LULUS dengan nilai "+na[i]);
+            } else {
+                System.out.println("Mahasiswa ke-"+i+" dinyatakan TIDAK LULUS dengan nilai "+na[i]);
+            }
         }
         ahh.close();
     }
