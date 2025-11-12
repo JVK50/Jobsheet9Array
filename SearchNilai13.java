@@ -1,10 +1,23 @@
 package Jobsheet9Array;
+import java.util.Scanner;
 
 public class SearchNilai13 {
     public static void main(String[] args) {
-        int arrNilai[] = {80,85,78,96,90,82,86};
-        int key = 90;
+        Scanner sc = new Scanner(System.in);
+
+        int arrNilai[];
+        int key;
         int hasil = 0;
+
+        System.out.print("Masukkan banyaknya nilai yang akan diinput: ");
+        arrNilai = new int[sc.nextInt()];
+
+        for (int i = 0; i < arrNilai.length; i++) {
+            System.out.print("Masukkan nilai mahasiswa ke-" + (i+1) + " : ");
+            arrNilai[i] = sc.nextInt();
+        }
+        System.out.print("Masukkan nilai yang ingin dicari: ");
+        key = sc.nextInt();
 
         for (int i = 0; i < arrNilai.length; i++) {
             if (key == arrNilai[i]) {
@@ -12,8 +25,8 @@ public class SearchNilai13 {
                 break;
             }
         }
-        System.out.println();
-        System.out.println("Nilai " + key + " ketemu di index ke-" + hasil);
-        System.out.println();
+        System.out.println("Nilai " + key + " ketemu, merukapan nilai mahasiswa ke-" + hasil);
+        
+        sc.close();
     }
 }
